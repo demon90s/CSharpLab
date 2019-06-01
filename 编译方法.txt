@@ -1,0 +1,15 @@
+﻿# for windows
+
+安装vs2015
+
+1. 将编译程序 csc.exe 的目录加入 Path 环境变量，比如在我的一机子上是：C:\Program Files (x86)\MSBuild\14.0\bin
+
+2. 打开命令行窗口，输入 csc programs.cs
+
+3. 生成可执行程序 programs.exe ，运行测试
+
+# for ubuntu 18.04
+
+sudo apt-get install mono-mcs
+
+然后使用 mcs programs.cs 编译生成程序
