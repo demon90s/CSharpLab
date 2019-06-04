@@ -48,6 +48,14 @@ namespace App
 			{
 				Console.WriteLine("Element[{0}]: {1}", i - 100, i);
 			}
+
+			Console.WriteLine("------------------------------------");
+
+			// 另外一种遍历方法
+			for (int i = 0; i < n.Length; i++)
+			{
+				Console.WriteLine("Element[{0}]: {1}", i, n[i]);
+			}
 		}
 
 		/* 传递数组给函数 */
@@ -80,17 +88,19 @@ namespace App
 		static void Main(string[] args)
 		{
 			//Test_数组初始化();
-			//Test_遍历数组();
+			Test_遍历数组();
 
 			// {
 			// 	int [] a = {1, 2, 3, 4, 5, 6};
 			// 	Console.WriteLine("{0}", getAverage(a, a.Length));
 			// }
 
+			/*
 			{
 				int [] a = {1, 2, 3, 4, 5, 6};
 				Console.WriteLine("{0}", getSum(a));
 			}
+			*/
 			
 			Console.ReadKey();
 		}
