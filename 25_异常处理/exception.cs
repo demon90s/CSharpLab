@@ -20,7 +20,7 @@ public class TempIsZeroException : ApplicationException {
 
 public class Temperature
 {
-	int temp;
+	public int temp = 0;
 
 	public Temperature(int temp_) {
 		if (temp_ == 0) {
@@ -40,9 +40,16 @@ public class MainEntry
 			int divisor = 0;
 
 			res = 10 / divisor;
+			res++;
 		}
 		catch (DivideByZeroException e) {
-			Console.WriteLine("Exception caught: {0}", e);
+			//Console.WriteLine("DivideByZeroException caught: {0}", e);
+			Console.WriteLine("Caught exception: " + e.GetType().Name + ": " + e.Message);
+		}
+		catch (Exception e) {
+			// Handle any uncaught exception 
+			Console.WriteLine(e.GetType().Name);
+			Console.WriteLine(e.Message);
 		}
 		finally {
 			// 要执行的语句
@@ -53,7 +60,8 @@ public class MainEntry
 
 	static void Test_自定义异常() {
 		try {
-			Temperature t = new Temperature(0);			
+			Temperature t = new Temperature(0);
+			Console.WriteLine(t.temp);
 		}
 		catch (TempIsZeroException e) {
 			Console.WriteLine("TempIsZeroException: {0}", e.Message);
@@ -61,7 +69,7 @@ public class MainEntry
 	}
 
 	static void Main(string[] args) {
-		//Test_捕获异常();
-		Test_自定义异常();
+		Test_捕获异常();
+		//Test_自定义异常();
 	}
 }

@@ -25,12 +25,13 @@ namespace App
 			balances[0] = 4500.0;
 
 			double[] balances2 = {4222.0, 3333.0, 1111.0};
+			Console.WriteLine(balances2[0]);	// 4222.0
 
 			int[] numbers = new int[5]{1, 2, 3, 4, 5};
 			int[] score = numbers; // 指向同一个数组
 
 			score[0] = 100;
-			Console.Write(numbers[0]);
+			Console.WriteLine(numbers[0]);	// 100
 		}
 
 		static void Test_遍历数组()
@@ -87,8 +88,8 @@ namespace App
 
 		static void Main(string[] args)
 		{
-			//Test_数组初始化();
-			Test_遍历数组();
+			Test_数组初始化();
+			//Test_遍历数组();
 
 			// {
 			// 	int [] a = {1, 2, 3, 4, 5, 6};
