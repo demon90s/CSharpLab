@@ -16,5 +16,14 @@ public class Entry
         Console.WriteLine("fmt result: {0}", String.Format("{0:c}", 100));      // $100.00  
         Console.WriteLine("fmt result: {0}", String.Format("{0:00.00}", 3.14));  // 03.14
         Console.WriteLine("fmt result: {0}", String.Format("{0:0,0}", 12000));    // 12,000
+
+        // split
+        foo = "one|two|three";
+        string[] str_arr = foo.Split("|");
+        foreach (string str in str_arr)
+        {
+            Console.Write(" " + str);       // one two three
+        }
+        Console.WriteLine();
     }
 }
