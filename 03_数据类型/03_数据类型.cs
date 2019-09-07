@@ -68,13 +68,40 @@ namespace Application
 ";
 			Console.WriteLine("str3: {0}", str3);
 		}
+
+		static void Test_MaxValue()
+		{
+			// MaxValue可以获得一种类型的最大值
+			// MinValue获得最小值
+			int maxint = int.MaxValue;
+			Console.WriteLine("maxint: " + maxint.ToString());
+
+			long maxlong = long.MaxValue;
+			Console.WriteLine("maxlong: " + maxlong.ToString());
+
+			decimal maxdecimal = decimal.MaxValue;
+			Console.WriteLine("maxdecimal: " + maxdecimal.ToString());
+
+			float maxfloat = float.MaxValue;
+			Console.WriteLine("maxfloat: " + maxfloat.ToString());
+		}
 	
+		static void Test_var_GetTypeCode()
+		{
+			// var 使用自动推导类型
+			// GetTypeCode 获取类型的名字
+			var name = "Diwen"; // a string
+			Console.WriteLine("name is a {0}", name.GetTypeCode());
+		}
+
 		static void Main(string[] args)
 		{
 			//Test_sizeof();
 			//Test_object();
 			//Test_dynamic();
-			Test_string();
+			//Test_string();
+			//Test_MaxValue();
+			Test_var_GetTypeCode();
 			
 			Console.ReadKey();
 		}
