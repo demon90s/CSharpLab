@@ -17,6 +17,38 @@ using System;
 
 public class MainEntry
 {
+	static void Test_Other()
+	{
+		// IsNullOrEmpty
+		string foo = "";
+		
+		if (String.IsNullOrEmpty(foo))
+		{
+			Console.WriteLine("foo is empty");
+		}
+		else
+		{
+			Console.WriteLine("Foo is not empty");
+		}
+
+		// Length
+		foo = "hello";
+		Console.WriteLine("Length of foo={0}", foo.Length);
+
+		// Trim white space
+		foo = "   foo   ";
+		Console.WriteLine("Trim result: *{0}*", foo.Trim());		// *foo*
+	}
+
+	static void Test_foreach_string()
+	{
+		string foo = "hello";
+		foreach(char c in foo)
+		{
+			Console.WriteLine(c);
+		}
+	}
+
 	static void Test_字符串初始化()
 	{
 		// 字符串连接
@@ -49,7 +81,8 @@ public class MainEntry
 		string str1 = "This is test";
 		string str2 = "This is text";
 
-		if (String.Compare(str1, str2) == 0)
+		//if (String.Compare(str1, str2) == 0)
+		if (str1.Equals(str2))
 		{
 			Console.WriteLine(str1 + " and " + str2 + " are equal.");
 		}
@@ -82,10 +115,13 @@ public class MainEntry
 
 	static void Main(string[] args)
 	{
+		Test_Other();
+		//Test_foreach_string();
 		//Test_字符串初始化();
 		//Test_比较字符串();
 		//Test_包含字符串();
-		Test_获取字符串();
+		//Test_获取字符串();
+
 		Console.ReadKey();
 	}
 }
